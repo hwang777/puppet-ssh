@@ -1,4 +1,4 @@
-package com.maxdemarzi;
+package com.graphaware.horne.cdbg.sp;
 
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.extension.KernelExtensionFactory;
@@ -15,13 +15,13 @@ public class RegisterTransactionEventHandlerExtensionFactory extends KernelExten
     public Lifecycle newInstance(KernelContext kernelContext, final Dependencies dependencies) throws Throwable {
         return new LifecycleAdapter() {
 
-            private MyTransactionEventHandler handler;
+            private ChangeLogger handler;
             private ExecutorService executor;
 
             @Override
             public void start() throws Throwable {
                 executor = Executors.newFixedThreadPool(2);
-                handler = new MyTransactionEventHandler(dependencies.getGraphDatabaseService(), executor);
+                handler = new ChangeLogger();
                 dependencies.getGraphDatabaseService().registerTransactionEventHandler(handler);
             }
 
