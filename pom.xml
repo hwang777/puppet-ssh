@@ -30,8 +30,9 @@
         <dependency>
             <groupId>com.graphaware.neo4j</groupId>
             <artifactId>tx-api</artifactId>
+            <version>3.3.2.51</version>
         </dependency>
- 		<dependency>
+ 	<dependency>
 	        <groupId>com.graphaware.neo4j</groupId>
 	        <artifactId>api</artifactId>
 	        <version>3.3.2.51</version><!--$NO-MVN-MAN-VER$-->
