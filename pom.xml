@@ -35,13 +35,11 @@
 	        <groupId>com.graphaware.neo4j</groupId>
 	        <artifactId>api</artifactId>
 	        <version>3.3.2.51</version><!--$NO-MVN-MAN-VER$-->
-	        <scope>provided</scope>
       	</dependency>
        <dependency>
         <groupId>com.graphaware.neo4j</groupId>
         <artifactId>runtime-api</artifactId>
         <version>3.3.2.51</version>
-        <scope>provided</scope>
       </dependency>
       
        <dependency>
